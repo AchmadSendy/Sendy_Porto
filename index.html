@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark')
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Achmad Sendy — Freelance Web Developer & IoT Engineer</title>
+    <meta
+      name="description"
+      content="Portofolio Achmad Sendy — Freelance Web Developer & IoT Engineer. Membangun website, sistem otomasi industri, IoT & SCADA. Open to remote work."
+    />
+    <meta name="author" content="Achmad Sendy" />
+
+    <!-- Open Graph (preview saat link dibagikan di WhatsApp/LinkedIn/Facebook) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Achmad Sendy — Freelance Web Developer & IoT Engineer" />
+    <meta
+      property="og:description"
+      content="Membangun website, sistem otomasi industri, IoT & SCADA. Open to remote work."
+    />
+    <meta property="og:image" content="/images/tentangsaya.png" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Achmad Sendy — Freelance Web Developer & IoT Engineer" />
+    <meta
+      name="twitter:description"
+      content="Membangun website, sistem otomasi industri, IoT & SCADA. Open to remote work."
+    />
+    <meta name="twitter:image" content="/images/tentangsaya.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

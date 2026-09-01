@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-red: #bf092f;
+  --color-brand-navy: #132440;
+  --color-brand-lavender: #eeecfa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-brand-navy font-sans antialiased transition-colors duration-300 dark:bg-brand-navy dark:text-white;
+}
+
+::selection {
+  @apply bg-brand-red/30 text-brand-navy;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 85s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
