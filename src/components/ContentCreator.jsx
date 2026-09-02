@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { SiYoutube, SiTiktok } from 'react-icons/si'
 import { profile } from '../data/content'
@@ -5,6 +6,19 @@ import { useLang } from '../i18n/LanguageContext'
 
 export default function ContentCreator() {
   const { ui } = useLang()
+
+  // Muat script embed resmi TikTok. Dihapus-tambah ulang tiap mount supaya
+  // script memindai & merender blockquote .tiktok-embed di halaman ini
+  // (iframe embed/v2 TikTok tidak reliable — sering tampil kosong).
+  useEffect(() => {
+    const SRC = 'https://www.tiktok.com/embed.js'
+    document.querySelectorAll(`script[src="${SRC}"]`).forEach((s) => s.remove())
+    const script = document.createElement('script')
+    script.src = SRC
+    script.async = true
+    document.body.appendChild(script)
+    return () => script.remove()
+  }, [])
 
   const cards = [
     {
@@ -42,15 +56,19 @@ export default function ContentCreator() {
       btnClass:
         'bg-brand-navy text-white hover:bg-brand-navy/90 dark:bg-white/10 dark:hover:bg-white/20',
       embed: (
-        <div className="flex w-full justify-center overflow-hidden rounded-xl">
-          <iframe
-            className="h-[575px] w-full max-w-[325px] rounded-xl"
-            src={`https://www.tiktok.com/embed/v2/${profile.tiktokVideoId}`}
-            title="TikTok video - sendyskot.my"
-            loading="lazy"
-            allow="autoplay; encrypted-media; fullscreen"
-            scrolling="no"
-          />
+        <div className="flex w-full justify-center">
+          <blockquote
+            className="tiktok-embed"
+            cite={`https://www.tiktok.com/@sendyskot.my/video/${profile.tiktokVideoId}`}
+            data-video-id={profile.tiktokVideoId}
+            style={{ maxWidth: '325px', minWidth: '260px', margin: 0 }}
+          >
+            <section>
+              <a target="_blank" rel="noreferrer" href={profile.tiktok}>
+                @sendyskot.my
+              </a>
+            </section>
+          </blockquote>
         </div>
       ),
     },
