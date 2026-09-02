@@ -17,6 +17,18 @@ export default function ContentCreator() {
       iconClass: 'text-brand-red',
       iconBg: 'bg-brand-red/10',
       btnClass: 'bg-brand-red text-white hover:bg-brand-red/90',
+      embed: (
+        <div className="w-full aspect-video overflow-hidden rounded-xl bg-black">
+          <iframe
+            className="h-full w-full"
+            src={`https://www.youtube-nocookie.com/embed/${profile.youtubeVideoId}`}
+            title="YouTube video - SendySkot"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      ),
     },
     {
       key: 'tiktok',
@@ -29,6 +41,18 @@ export default function ContentCreator() {
       iconBg: 'bg-brand-navy/10 dark:bg-white/10',
       btnClass:
         'bg-brand-navy text-white hover:bg-brand-navy/90 dark:bg-white/10 dark:hover:bg-white/20',
+      embed: (
+        <div className="flex w-full justify-center overflow-hidden rounded-xl">
+          <iframe
+            className="h-[575px] w-full max-w-[325px] rounded-xl"
+            src={`https://www.tiktok.com/embed/v2/${profile.tiktokVideoId}`}
+            title="TikTok video - sendyskot.my"
+            loading="lazy"
+            allow="autoplay; encrypted-media; fullscreen"
+            scrolling="no"
+          />
+        </div>
+      ),
     },
   ]
 
@@ -58,22 +82,25 @@ export default function ContentCreator() {
           {ui.creator.subtitle}
         </motion.p>
 
-        <div className="mt-10 grid sm:grid-cols-2 gap-6">
+        <div className="mt-10 grid sm:grid-cols-2 gap-6 items-start">
           {cards.map((c, i) => (
             <motion.div
               key={c.key}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="flex flex-col items-center text-center rounded-2xl border border-brand-navy/10 dark:border-white/10 bg-brand-lavender dark:bg-white/5 p-8 hover:border-brand-red/40 transition-colors"
+              className="flex flex-col items-center text-center rounded-2xl border border-brand-navy/10 dark:border-white/10 bg-brand-lavender dark:bg-white/5 p-6 hover:border-brand-red/40 transition-colors"
             >
-              <div className={`w-16 h-16 rounded-full ${c.iconBg} flex items-center justify-center`}>
-                <c.Icon className={`w-8 h-8 ${c.iconClass}`} />
+              {c.embed}
+              <div className="mt-5 flex items-center gap-2.5">
+                <span className={`w-9 h-9 rounded-full ${c.iconBg} flex items-center justify-center shrink-0`}>
+                  <c.Icon className={`w-4.5 h-4.5 ${c.iconClass}`} />
+                </span>
+                <h4 className="text-lg font-semibold text-brand-navy dark:text-white">
+                  {c.name}
+                </h4>
               </div>
-              <h4 className="mt-5 text-lg font-semibold text-brand-navy dark:text-white">
-                {c.name}
-              </h4>
               <p className="mt-2 text-sm text-brand-navy/60 dark:text-white/60 leading-relaxed">
                 {c.desc}
               </p>
@@ -81,7 +108,7 @@ export default function ContentCreator() {
                 href={c.href}
                 target="_blank"
                 rel="noreferrer"
-                className={`mt-6 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors ${c.btnClass}`}
+                className={`mt-5 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-colors ${c.btnClass}`}
               >
                 <c.Icon className="w-4 h-4" />
                 {c.btn}
