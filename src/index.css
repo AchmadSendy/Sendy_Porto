@@ -18,7 +18,7 @@ body {
 }
 
 ::selection {
-  @apply bg-brand-red/30 text-brand-navy;
+  @apply bg-brand-red text-white;
 }
 
 @keyframes marquee {
