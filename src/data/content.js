@@ -13,6 +13,7 @@ export const profile = {
     en: 'Freelance Web Developer & IoT Engineer, and a Mechatronics Engineering student. Experienced across multidisciplinary projects — from microcontroller-based industrial automation, IoT & SCADA, to websites and landing pages for freelance clients. Also actively creating electronics & mechatronics educational content on YouTube and TikTok through SendySkot.',
   },
   email: 'achmadsendy91@gmail.com',
+  whatsapp: '6285790812139',
   linkedin: 'https://www.linkedin.com/in/achmadsendy',
   github: 'https://github.com/AchmadSendy',
   youtube: 'https://www.youtube.com/@SendySkot',
