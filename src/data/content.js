@@ -18,8 +18,8 @@ export const profile = {
   github: 'https://github.com/AchmadSendy',
   youtube: 'https://www.youtube.com/@SendySkot',
   blog: 'https://www.sendyskot.my.id/',
-  cvId: '/cv/CV-Achmad-Sendy-ID.docx',
-  cvEn: '/cv/CV-Achmad-Sendy-EN.docx',
+  cvId: '/cv/CV-Achmad-Sendy-2026.pdf',
+  cvEn: '/cv/CV-Achmad-Sendy-2026-EN.pdf',
   location: {
     id: 'Sleman, Daerah Istimewa Yogyakarta',
     en: 'Sleman, Special Region of Yogyakarta, Indonesia',
