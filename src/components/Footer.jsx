@@ -1,4 +1,4 @@
-import { SiYoutube } from 'react-icons/si'
+import { SiYoutube, SiTiktok } from 'react-icons/si'
 import { profile } from '../data/content'
 import { useLang } from '../i18n/LanguageContext'
 
@@ -22,6 +22,11 @@ const socials = [
     label: 'YouTube',
     href: profile.youtube,
     Icon: SiYoutube,
+  },
+  {
+    label: 'TikTok',
+    href: profile.tiktok,
+    Icon: SiTiktok,
   },
   {
     label: 'Email',

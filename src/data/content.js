@@ -17,6 +17,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/achmadsendy',
   github: 'https://github.com/AchmadSendy',
   youtube: 'https://www.youtube.com/@SendySkot',
+  tiktok: 'https://www.tiktok.com/@sendyskot.my',
   blog: 'https://www.sendyskot.my.id/',
   cvId: '/cv/CV-Achmad-Sendy-2026.pdf',
   cvEn: '/cv/CV-Achmad-Sendy-2026-EN.pdf',

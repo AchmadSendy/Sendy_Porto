@@ -66,6 +66,15 @@ export const strings = {
       fallbackDesc:
         'Artikel dan dokumentasi project seputar IoT, mikrokontroler, simulasi CNC, dan dasar elektronika. Baca tutorial dan catatan teknis terbaru langsung di sendyskot.my.id.',
     },
+    creator: {
+      title: 'Konten Edukasi Teknologi',
+      subtitle:
+        'Aku juga aktif berbagi ilmu elektronika, mekatronika, dan IoT lewat SendySkot. Yuk mampir, tonton, dan follow! 🚀',
+      youtubeDesc: 'Tutorial & edukasi elektronika dan mekatronika.',
+      youtubeBtn: 'Tonton di YouTube',
+      tiktokDesc: 'Tips singkat & konten teknologi bite-size.',
+      tiktokBtn: 'Lihat di TikTok',
+    },
     clients: { title: 'Yang Pernah Bekerja Sama' },
     contact: {
       title: 'Mari terhubung',
@@ -148,6 +157,15 @@ export const strings = {
       fallbackTitle: 'SendySkot Blog',
       fallbackDesc:
         'Articles and project documentation on IoT, microcontrollers, CNC simulation, and electronics fundamentals. Read the latest tutorials and technical notes directly at sendyskot.my.id.',
+    },
+    creator: {
+      title: 'Tech Education Content',
+      subtitle:
+        'I also share electronics, mechatronics, and IoT knowledge as SendySkot. Come watch and follow along! 🚀',
+      youtubeDesc: 'Tutorials & education on electronics and mechatronics.',
+      youtubeBtn: 'Watch on YouTube',
+      tiktokDesc: 'Quick tips & bite-size tech content.',
+      tiktokBtn: 'View on TikTok',
     },
     clients: { title: 'Who I have worked with' },
     contact: {

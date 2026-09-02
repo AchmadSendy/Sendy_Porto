@@ -10,6 +10,7 @@ import Projects from './components/Projects'
 import Education from './components/Education'
 import Certificates from './components/Certificates'
 import Blog from './components/Blog'
+import ContentCreator from './components/ContentCreator'
 import Clients from './components/Clients'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -30,6 +31,7 @@ export default function App() {
         <Education />
         <Certificates />
         <Blog />
+        <ContentCreator />
         <Clients />
         <Contact />
       </main>
