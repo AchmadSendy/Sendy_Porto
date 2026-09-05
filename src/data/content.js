@@ -29,7 +29,7 @@ export const profile = {
   },
   photo: '/images/profile1.svg',
   photoBg: '/images/bg-profile1.svg',
-  photoAbout: '/images/tentangsaya.png',
+  photoAbout: '/images/tentangsaya.webp',
   roles: {
     id: ['Freelance Web Developer', 'IoT Engineer', 'Mechatronics Engineer'],
     en: ['Freelance Web Developer', 'IoT Engineer', 'Mechatronics Engineer'],

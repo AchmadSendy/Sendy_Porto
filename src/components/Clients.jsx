@@ -30,6 +30,7 @@ export default function Clients() {
               <img
                 src={client.logo}
                 alt={client.name}
+                loading="lazy"
                 className="h-9 sm:h-10 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition-all duration-300"
               />
             </motion.div>

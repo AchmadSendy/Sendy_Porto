@@ -57,6 +57,7 @@ export default function About() {
               transition={{ duration: 0.5 }}
               src={profile.photoAbout}
               alt={profile.name}
+              loading="lazy"
               className="w-full max-w-[280px] mx-auto md:mx-0 aspect-square rounded-3xl object-cover shadow-2xl"
             />
           )}

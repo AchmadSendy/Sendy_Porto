@@ -31,6 +31,7 @@ export default function Certificates() {
                 <img
                   src={cert.image}
                   alt={t(cert.title)}
+                  loading="lazy"
                   className="w-full h-44 object-cover"
                 />
               )}
