@@ -164,7 +164,7 @@ export const projects = [
     },
     tech: ['WordPress', 'Elementor Pro', 'UI/UX'],
     repo: '',
-    demo: '',
+    demo: 'https://satinese.com',
     images: [
       '/images/projects/satinese-1.jpg',
       '/images/projects/satinese-2.jpg',
