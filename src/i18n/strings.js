@@ -26,7 +26,7 @@ export const strings = {
       body: 'Fokus pada komunikasi yang jelas, deadline yang ditepati, dan solusi yang benar-benar menyelesaikan masalah — baik itu project web, otomasi, maupun IoT.',
       stats: [
         { value: '3+', label: 'Tahun Pengalaman' },
-        { value: '8+', label: 'Project Selesai' },
+        { value: '10+', label: 'Project Selesai' },
       ],
       cta: 'Hubungi Saya',
     },
@@ -118,7 +118,7 @@ export const strings = {
       body: "Focused on clear communication, deadlines that are met, and solutions that actually solve the problem — whether it's a web, automation, or IoT project.",
       stats: [
         { value: '3+', label: 'Years of Experience' },
-        { value: '8+', label: 'Projects Completed' },
+        { value: '10+', label: 'Projects Completed' },
       ],
       cta: 'Get in Touch',
     },
