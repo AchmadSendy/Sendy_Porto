@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Lightbox from './Lightbox'
 
@@ -6,13 +6,36 @@ export default function ImageCarousel({ images, alt }) {
   const [index, setIndex] = useState(0)
   const [lightboxOpen, setLightboxOpen] = useState(false)
 
+  // Gambar yang sudah selesai diunduh browser. Carousel hanya berpindah ke
+  // gambar berikutnya kalau gambar itu sudah siap, jadi tidak pernah kosong.
+  const loaded = useRef(new Set())
+
+  useEffect(() => {
+    if (images.length < 2) return
+    let cancelled = false
+    const next = images[(index + 1) % images.length]
+    if (!loaded.current.has(next)) {
+      const img = new Image()
+      img.onload = () => {
+        if (!cancelled) loaded.current.add(next)
+      }
+      img.src = next
+    }
+    return () => {
+      cancelled = true
+    }
+  }, [index, images])
+
   useEffect(() => {
     if (images.length < 2) return
     const id = setInterval(() => {
-      setIndex((i) => (i + 1) % images.length)
+      setIndex((i) => {
+        const n = (i + 1) % images.length
+        return loaded.current.has(images[n]) ? n : i
+      })
     }, 3000)
     return () => clearInterval(id)
-  }, [images.length])
+  }, [images])
 
   if (images.length === 0) return null
 
