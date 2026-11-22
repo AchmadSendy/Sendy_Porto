@@ -142,6 +142,54 @@ export const education = {
 
 export const projects = [
   {
+    title: 'Weekn Store — Cashier & Store Management System',
+    description: {
+      id: 'Sistem kasir dan manajemen toko untuk jaringan Toko Roti Week N, sudah beroperasi. Mencakup transaksi kasir (tunai & QRIS), buka/tutup shift, refund dan retur, order stok dari pabrik, pesanan PO, piutang dagang, serta laporan retur dan sisa stok. Dirancang dari dokumen SRS bersama stakeholder dengan antarmuka tablet yang cepat dan mudah dipakai kasir.',
+      en: 'A cashier and store management system for the Week N Bakery chain, already in production. Covers cashier transactions (cash & QRIS), shift open/close, refunds and returns, stock orders from the factory, PO orders, trade receivables, and return and remaining-stock reports. Designed from an SRS document with stakeholders, with a fast tablet-friendly interface for cashiers.',
+    },
+    tech: ['React', 'Laravel', 'POS', 'SRS'],
+    repo: '',
+    demo: '',
+    images: [
+      '/images/projects/weekn-store-1-kasir.webp',
+      '/images/projects/weekn-store-2-riwayat.webp',
+      '/images/projects/weekn-store-3-retur.webp',
+      '/images/projects/weekn-store-4-order-stok.webp',
+    ],
+  },
+  {
+    title: 'Weekn Pabrik — Head Office & Production Management System',
+    description: {
+      id: 'Sistem pusat (Head Office) untuk pabrik roti: katalog produk dan stok, pesanan customer (PO) dengan jadwal produksi dan pengiriman, purchase order bahan baku ke supplier lengkap dengan peringatan jatuh tempo, serta order produksi dengan alur pending, produksi, QC, packing, hingga ready. Laporan bisa diekspor ke Excel, PDF, dan Word.',
+      en: 'A head-office system for a bakery factory: product catalog and stock, customer orders (PO) with production and delivery schedules, raw-material purchase orders to suppliers with payment due-date alerts, and production orders flowing from pending, production, QC, and packing to ready. Reports can be exported to Excel, PDF, and Word.',
+    },
+    tech: ['React', 'Laravel', 'Dashboard', 'Reporting'],
+    repo: '',
+    demo: '',
+    images: [
+      '/images/projects/weekn-ho-1-produksi.webp',
+      '/images/projects/weekn-ho-2-purchase-order.webp',
+      '/images/projects/weekn-ho-3-pesanan-customer.webp',
+      '/images/projects/weekn-ho-4-supplier.webp',
+    ],
+  },
+  {
+    title: 'Weekn HR — Human Resource Management System',
+    description: {
+      id: 'Sistem HRD berbasis web: absensi clock in/out dengan foto dan verifikasi wajah, impor data fingerprint, penjadwalan shift mingguan dan bulanan, tukar shift, pengajuan cuti dengan persetujuan, KPI dan SOP harian, catatan dan SP, hingga payroll (kasbon, koperasi, dan slip gaji via email). Dilengkapi pengumuman dan peringatan jadwal untuk tim HR.',
+      en: 'A web-based HR system: clock in/out attendance with photo and face verification, fingerprint data import, weekly and monthly shift scheduling, shift swaps, leave requests with approvals, daily KPI and SOP, notes and warnings, and payroll (cash advances, cooperative, and payslips by email). Includes announcements and schedule alerts for the HR team.',
+    },
+    tech: ['React', 'Laravel', 'Payroll', 'Face Verification'],
+    repo: '',
+    demo: '',
+    images: [
+      '/images/projects/weekn-hr-1-dashboard.webp',
+      '/images/projects/weekn-hr-2-kehadiran.webp',
+      '/images/projects/weekn-hr-3-penjadwalan.webp',
+      '/images/projects/weekn-hr-4-shift.webp',
+    ],
+  },
+  {
     title: 'Automated Dough Pusher System for Industrial Bakery',
     description: {
       id: 'Sistem pendorong adonan otomatis untuk mengoptimalkan efisiensi lini produksi bakery komersial. Mengintegrasikan stepper motor NEMA 23 dengan driver DM542 untuk kontrol gerakan presisi, dan custom PCB dengan step-down converter untuk distribusi daya yang stabil.',
